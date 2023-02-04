@@ -42,7 +42,7 @@ function Cards() {
     <section className="">
       <div className='mx-[200px] py-10 px-5'>
         <h2 className='text-white'>Наявність речей ({count})</h2>
-        <ul className='columns-3 my-2 justify-between'>
+        <ul className='xl:columns-3 my-2 justify-between md:columns-2 sm:columns-1'>
           {loaded ?
             clothes.map(lot => <Card clothes={lot} />) :
             <img src={loading} />}
