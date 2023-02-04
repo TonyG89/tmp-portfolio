@@ -4,9 +4,7 @@ import { brandList } from '../const';
 const Card = ({ clothes }) => {
   const { amount, brand, category, color, link, name, price, size, type } = clothes
 
-  const srcImg = `/files/goods/${link}.png`
-  // console.log(hoodyGrey);
-  console.log(srcImg);
+  const srcImg = (src = 'none') => `/files/goods/${src?src:'none'}.png`
 
   return (
     <li class="
@@ -19,7 +17,7 @@ const Card = ({ clothes }) => {
     text-amber-300
     ">
       <h2 class="font-bold text-xl mb-2">{name}</h2>
-      <img class="rounded-xl bg-zinc-200/20 h-[300px] w-auto mx-auto p-5 border-white" src={srcImg} alt={link} />
+      <img class="rounded-xl bg-zinc-200/20 h-[300px] w-auto mx-auto p-5 border-white" src={srcImg(link)} alt={link} />
       <div class="border-spacing-1">
         <em className='text-lg'>Опис:</em>
         <p>{brand} {size} {color} {type}</p>

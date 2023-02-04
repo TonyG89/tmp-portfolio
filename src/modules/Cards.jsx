@@ -8,6 +8,7 @@ import loading from '../assets/img/loading.svg';
 function Cards() {
   const [clothes, setClothes] = useState([])
   const [loaded, setLoaded] = useState(false)
+  const [count,setCount] = useState(0)
 
   const url = 'https://script.googleusercontent.com/macros/echo?user_content_key=6KNYnrvxGu8-XEznyWiyrmvLMWH5wVz8rszMd6F__C4m8uObruF1n7gTL_v0SkmEwLsuW9kyoa7YEhcW4iUjPLCdONBnzWYIm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCwFmz2LyBL4dHdKZb3GoXSsjaOeh0hHk1eTsTFLkXFYc3Gw6IBq_H-VdHJ6rZ63cNIRhO6Ptb6l1iyJ9Bq2l9YjorF5gBPA_A&lib=MVmebBZpjk358cGI4x7YvWNAONQ2lCa5B'
 
@@ -24,10 +25,11 @@ function Cards() {
         const response = await fetch(url)
         const clothesData = await response.json()
         setClothes(clothesData.clothes)
+        setCount(clothesData.clothes.length)
       }
       catch(error) {
         console.log("HEY! MAN! ERROR - " + error);
-        alert('Вибачаємось,але список не завантажився')
+        // alert('Вибачаємось, але список не завантажився')
         setClothes(reserveClose)
       } finally {
         setLoaded(true)
@@ -39,7 +41,7 @@ function Cards() {
   return (
     <section className="bg-gradient-to-l from-slate-600 to-amber-300">
       <div className='mx-[200px] py-10 px-5'>
-        <h2 className=''>Наявність речей</h2>
+        <h2 className=''>Наявність речей ({count})</h2>
         <ul className='flex flex-1 flex-wrap my-2 justify-between'>
           {loaded ?
             clothes.map(lot => <Card clothes={lot} />) :

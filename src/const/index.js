@@ -6,7 +6,7 @@ const objContacts = [{
     href: "https://www.instagram.com/toomuch.print/"
 },
 {
-    name: "+38 (063) 229-03-66",
+    name: "(063) 229-03-66",
     img: "phone",
     href: "tel:+380632290366"
 },

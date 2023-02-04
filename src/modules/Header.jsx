@@ -4,7 +4,8 @@ import Contacts from '../components/Contacts';
 
 const Header = () => {
     return (
-        <header className="flex justify-around items-center bg-gradient-to-t from-amber-400 to-cyan-600 border-b-2 py-5">
+        <header className="flex justify-around items-center 
+        bg-gradient-to-t from-stone-900 to-stone-700 border-b-2 py-5">
             <Logo />
             <hgroup className='text-center'>
                 <h1 className="text-amber-400 text-5xl drop-shadow-lg">

@@ -1,8 +1,12 @@
 import React from 'react'
+import Contacts from './../components/Contacts';
 
 const Footer = () => {
+  // const width = 'flex-col'
   return (
-    <div>Footer</div>
+    <>
+      <Contacts width="auto" flexible="flex"/>
+    </>
   )
 }
 

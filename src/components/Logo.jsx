@@ -3,10 +3,10 @@ import logo from '../assets/img/logo.png';
 
 const Logo = () => {
     return (
-        <><a href="#" className="w-60 h-60 p-8 bg-amber-100 text-center rounded-full
-    ring-2 ring-amber-400 font-bold ">
+        <><a href="#" className="w-40 h-40 p-8 bg-amber-100 text-center rounded-full
+    ring-2 ring-amber-400 ">
         <img src={logo}
-        className="hover:animate-spin " alt="logo" /></a>
+        className="scale-150 pb-5 hover:animate-spin " alt="logo" /></a>
         </>
     )
 }
