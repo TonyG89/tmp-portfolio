@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header/>
-      <main className=''>
+      <main className='bg-gradient-to-t from-stone-700 to-stone-900'>
       <Cards/>
       </main>
       <Footer/>

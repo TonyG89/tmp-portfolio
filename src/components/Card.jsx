@@ -8,12 +8,13 @@ const Card = ({ clothes }) => {
 
   return (
     <li class="
+    w-full
     min-w-[300px]
     border-box border rounded-md border-b
     overflow-hidden 
     shadow-lg 
     bg-cards bg-cover
-    px-3 py-1 mx-2 my-4 
+    px-3 py-1 mx-2 gap-4
     text-amber-300
     ">
       <h2 class="font-bold text-xl mb-2">{name}</h2>

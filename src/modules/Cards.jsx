@@ -39,10 +39,10 @@ function Cards() {
   }, [])
 
   return (
-    <section className="bg-gradient-to-l from-slate-600 to-amber-300">
+    <section className="">
       <div className='mx-[200px] py-10 px-5'>
-        <h2 className=''>Наявність речей ({count})</h2>
-        <ul className='flex flex-1 flex-wrap my-2 justify-between'>
+        <h2 className='text-white'>Наявність речей ({count})</h2>
+        <ul className='columns-3 my-2 justify-between'>
           {loaded ?
             clothes.map(lot => <Card clothes={lot} />) :
             <img src={loading} />}
