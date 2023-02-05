@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -13,10 +14,15 @@ module.exports = {
       '4xl': '2.441rem',
       '5xl': '3.052rem',
     },
+    fontFamily: {
+      'main': ["'Oranienbaum'", "serif"],
+      'title': "'Rampart One', cursive",
+      'secondary': ["'Yanone Kaffeesatz'", "sans-serif"],
+    },
     screens: {
-      'xl': '1440px',
-      'md': '1024px',
-      "sm": '405px'
+      '2xl': '1440px',
+      'xl': '1024px',
+      "md": '768px'
     },
     extend: {
       colors: {

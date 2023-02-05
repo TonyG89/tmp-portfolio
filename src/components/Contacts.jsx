@@ -6,19 +6,30 @@ import email from '../assets/img/icons/email.svg';
 import telegramMono from '../assets/img/icons/telegram-mono.svg';
 
 const Contacts = (props) => {
-    const {width = "250px", flexible = ''} = props
+    const {width = "220px", style = ''} = props
     const img = [instagram, phone, telegramMono,email]
-    const blockHeader = (contacts, index) => (
-        <a key={index} href={contacts.href} className={`flex justify-start ${width === "250px" && "hover:font-semibold"}`}>
-            <img className="h-6 self-center" src={img[index]} alt={contacts.img} />
-            <h4 className="px-2">{contacts.name}</h4>
+
+    const block = (contacts, index) => (
+        <a key={index} href={contacts.href} 
+        className={`
+        flex 
+        ${style} ${width === "200px" && "hover:font-semibold"
+        }`}>
+            <img className="
+            md:h-6 self-center
+            h-4  
+            " src={img[index]} alt={contacts.img} />
+            <h4 className="px-2 xl:text-xl text-sm">{contacts.name}</h4>
         </a>)
 
     return (
-        <div className={`contacts w-[${width}] ${width !== "250px" && 'flex justify-around' } rounded-md ring-2
-    p-3 bg-amber-100 ring-amber-400`}>
-            {objContacts.map((i, index) => blockHeader(i, index))}
-        </div>
+        <address className={`contacts 
+        xl:w-[${width}] xl:block xl:p-3 xl:${style} 
+        md:hidden
+        flex justify-around flex-wrap rounded-md px-2 ring-2 
+     bg-amber-100 ring-amber-400`}>
+            {objContacts.map((i, index) => block(i, index))}
+        </address>
     )
 }
 

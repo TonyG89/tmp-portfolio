@@ -8,14 +8,14 @@ const Card = ({ clothes }) => {
 
   return (
     <li class="
-    w-full
-    min-w-[300px]
+    max-w-[325px]
     border-box border rounded-md border-b
     overflow-hidden 
     shadow-lg 
     bg-cards bg-cover
-    px-3 py-1 mx-2 gap-4
+    px-3 py-1 mx-2 mb-8 gap-4
     text-amber-300
+    mx-auto
     ">
       <h2 class="font-bold text-xl mb-2">{name}</h2>
       <img class="rounded-xl bg-zinc-200/20 h-[300px] w-auto mx-auto p-5 border-white" src={srcImg(link)} alt={link} />
