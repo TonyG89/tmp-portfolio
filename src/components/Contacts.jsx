@@ -26,8 +26,8 @@ const Contacts = (props) => {
         <address className={`contacts 
         xl:w-[${width}] xl:block xl:p-3 xl:${style} 
         md:hidden
-        flex justify-around flex-wrap rounded-md px-2 ring-2 
-     bg-amber-100 ring-amber-400`}>
+        flex justify-around flex-wrap  px-2 border-l-2 border-stone-900
+     bg-stone-0 ring-stone-900`}>
             {objContacts.map((i, index) => block(i, index))}
         </address>
     )

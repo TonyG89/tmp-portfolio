@@ -2,9 +2,9 @@ import React from 'react'
 import { brandList } from '../const';
 
 const Card = ({ clothes }) => {
-  const { amount, brand, category, color, link, name, price, size, type } = clothes
+  const { amount, brand, category,density, color, link, name, price, size, type } = clothes
 
-  const srcImg = (src = 'none') => `/files/goods/${src?src:'none'}.png`
+  const srcImg = (src = 'none') => `/files/goods/${src ? src : 'none'}.png`
 
   return (
     <li class="
@@ -14,8 +14,7 @@ const Card = ({ clothes }) => {
     shadow-lg 
     bg-cards bg-cover
     px-3 py-1 mx-2 mb-8 gap-4
-    text-amber-300
-    mx-auto
+    text-amber-100
     ">
       <h2 class="font-bold text-xl mb-2">{name}</h2>
       <img class="rounded-xl bg-zinc-200/20 h-[300px] w-auto mx-auto p-5 border-white" src={srcImg(link)} alt={link} />
@@ -26,10 +25,11 @@ const Card = ({ clothes }) => {
       <ul class="px-6 py-4 border ">
         <li><h3><b>Бренд: </b>{brandList[brand]}</h3></li>
         <li><b>Розмір: </b>{size}</li>
-        <li><b>Тип: </b>{type}</li>
         <li><b>Колір: </b>{color}</li>
-        <li><b>Категорія: </b>{category}</li>
-        <li><b>Наявність: </b>{amount}</li>
+        <li><b>Модель: </b>{type}</li>
+        <li><b>Плотність: </b>{density} г/м<sup>2</sup></li>
+        <li><b>Тканина: </b>{category}</li>
+        <li><b>Наявність: </b>{amount} шт.</li>
         <li><b>Ціна: </b>{price ? <span>{price} грн</span> : <i>уточнюйте</i>}</li>
       </ul>
       <div class="px-6 pt-4 pb-2">

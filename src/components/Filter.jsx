@@ -1,8 +1,16 @@
 import React from 'react'
+import ButtonList from './ButtonList.jsx'
+import {filterList} from '../const';
 
-const Filter = () => {
+const Filter = ({clothes}) => {
+console.log(clothes)
   return (
-    <>Filter</>
+    <><h3>Фільтрувати:</h3>
+
+    
+{/* <ButtonList arr={clothes}/> */}
+
+    </>
   )
 }
 

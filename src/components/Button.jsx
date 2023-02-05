@@ -8,12 +8,10 @@ const colors = {
     cyan: 'bg-cyan-600 hover:bg-cyan-700 text-white',
 }
 
-export default function Button({ color, size, children }) {
-    let colorClasses = colors[color]
-    let sizeClasses = sizes[size]
+export default function Button({style}) {
 
     return (
-        <button type="button" className={`font-bold ${sizeClasses} ${colorClasses}`}>
+        <button type="button" className={`font-bold ${style} bg-stone-400 ring-$stone-900 ring-1 rounded-xl text-[${size}] `}>
             {children}
         </button>
     )

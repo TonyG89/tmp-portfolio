@@ -9,10 +9,10 @@ const Logo = () => {
         md:hidden
         w-40 h-40 
         p-8 
-        bg-amber-100 
+        bg-stone-300 
         text-center 
         rounded-full
-        ring-2 ring-stone-50 ">
+        ring-2 ring-stone-900 ">
         <img src={logo}
         className="scale-150 pb-5 hover:animate-spin " alt="logo" /></a>
         </>
