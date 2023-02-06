@@ -57,9 +57,9 @@ function Cards() {
     document.removeEventListener('scroll', scrollHandler)
     }
   })
-
+  
   const scrollHandler = (e) => {
-    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100) {
+    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && clothesOnPage.length <=  clothes.length) {
       setFetching(true)
     }
   }

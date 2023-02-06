@@ -9,8 +9,8 @@ function App() {
     <>
       <Header/>
       <main className='bg-gradient-to-t from-stone-700 to-stone-900'>
-      <Cards/>
       <AgGrid/>
+      <Cards/>
       </main>
       <Footer/>
     </>
