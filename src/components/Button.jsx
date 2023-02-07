@@ -8,10 +8,16 @@ const colors = {
     cyan: 'bg-cyan-600 hover:bg-cyan-700 text-white',
 }
 
-export default function Button({style}) {
+export default function Button({ action, children, style = '' }) {
 
     return (
-        <button type="button" className={`font-bold ${style} bg-stone-400 ring-$stone-900 ring-1 rounded-xl text-[${size}] `}>
+        <button onClick={action} type="button" className={`
+        px-2 m-4
+        font-bold 
+        ${style} 
+        bg-stone-400 
+        ring-$stone-900 ring-1 rounded-xl 
+        `}>
             {children}
         </button>
     )

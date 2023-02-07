@@ -18,9 +18,9 @@ const Header = () => {
             md:flex-row">
                 <Logo />
                 <hgroup className=' text-center mb-8'>
-                    <h1 className="text-stone-900 
+                    <h1 className="text-stone-600 
                     font-title 
-                    text-transparent bg-clip-text bg-gradient-to-b from-stone-400 to-amber-300
+                    text-transparent bg-clip-text bg-gradient-to-b from-stone-400 to-stone-900
                     drop-shadow-lg">
                         Too Much Plant Clothes
                     </h1>
@@ -30,8 +30,8 @@ const Header = () => {
                 rounded-md
                 md:text-md
                 text-base
-                bg-stone-700
-                hover:bg-red-900 hover:text-amber-200">
+                bg-gradient-to-b from-stone-600 to-stone-900"
+                >
                         Речі що є зараз в наявності, та продаються по заниженій ціні!
                     </p>
                 </hgroup>

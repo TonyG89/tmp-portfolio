@@ -3,7 +3,7 @@ import ButtonList from './ButtonList.jsx'
 import {filterList} from '../const';
 
 const Filter = ({clothes}) => {
-console.log(clothes)
+// console.log(clothes)
   return (
     <><h3>Фільтрувати:</h3>
 
