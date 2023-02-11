@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button';
 
-const TableBtn = ({ setTableOn }) => {
+const TableBtn = ({ setTableOn, style='', children= "check" }) => {
     const [toggle, setToggle] = React.useState(false)
 
     const onToggle = () => {
@@ -11,7 +11,7 @@ const TableBtn = ({ setTableOn }) => {
 
     return (
         <>
-            <Button action={onToggle} children={toggle ? "Плитка" : "Таблиця"} />
+            <Button action={onToggle}  style={style}>{children}</Button>
         </>
     )
 }
