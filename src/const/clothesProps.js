@@ -8,7 +8,8 @@ const clothesProps = {
      name:"Назва",
      price:"Ціна",
      size:"Розмір",
-     type:"Тип"
+     type:"Тип",
+     composition:"бавовна/синтетика"
 }
 
 export default clothesProps

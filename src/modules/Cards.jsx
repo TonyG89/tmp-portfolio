@@ -32,7 +32,7 @@ function Cards({setCount}) {
       }
       catch (error) {
         console.log("HEY! MAN! ERROR - " + error);
-        // alert('Вибачаємось, але список не завантажився')
+        // alert('Вибачаємось, але список не завантажився! Повідомте, будь ласка, про дану проблему нам')
         setClothes(reserveClose)
       } finally {
         setLoaded(true)
