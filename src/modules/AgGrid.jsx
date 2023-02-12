@@ -20,13 +20,13 @@ const AgGrid = () => {
   useEffect(() => {
     setLoaded(false)
     axios.get(url).then((res) => {
-      let keys = Object.keys(...res.data.clothes).filter((item) => item !== "type" && item !== "id-items" && item !== "link" && item !== "category")
+      let keys = Object.keys(...res.data.goods).filter((item) => item !== "type" && item !== "id-items" && item !== "link" && item !== "category")
 
       const titleName = (same) => clothesProps[Object.keys(clothesProps).filter(prop => prop == same)]
       const mainColumn = (i) => ({ field: i, headerName: titleName(i), rowGroup: i == "name", hide: i === "name", minWidth: i === "color" ? 160 : 90, aggFunc: i === "amount" && 'sum' })
 
       setColumnDefs(keys.map(mainColumn))
-      setRowData(res.data.clothes)
+      setRowData(res.data.goods)
       setLoaded(true)
     })
   }, [])

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Card from '../components/Card';
+import CardGoods from '../components/CardGoods';
 import Count from '../components/Count';
 import Filter from '../components/Filter';
 import Loading from '../components/Loading';
@@ -26,9 +26,10 @@ function Cards({setCount}) {
       try {
         const response = await fetch(url)
         const data = await response.json()
-        setClothes(data.clothes)
-        setClothesOnPage(data.clothes.slice(0, 10))
-        setCount(data.clothes.length)
+        console.log(data)
+        setClothes(data.goods)
+        setClothesOnPage(data.goods.slice(0, 10))
+        setCount(data.goods.length)
       }
       catch (error) {
         console.log("HEY! MAN! ERROR - " + error);
@@ -72,7 +73,7 @@ function Cards({setCount}) {
       <Filter clothes={clothes} />
       <ul className={ulClass}>
         {loaded ?
-          clothesOnPage.map(lot => <Card clothes={lot} />) :
+          clothesOnPage.map(lot => <CardGoods clothes={lot} key={lot["id-items"]}/>) :
           <Loading />}
       </ul>
     </>

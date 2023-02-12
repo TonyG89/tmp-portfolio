@@ -1,25 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { url } from '../const';
+import axios from 'axios';
+import Portfolio from '../modules/Portfolio'
 
 const StoragePrint = () => {
-
+  const [storageClothes, setStorageClothes] = useState([]);
 
   React.useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        return () => {
-          cleanup
-        };
-      }
-
-        , []);
-
-  }).catch(e => {
-    console.log("erRor!!! " + e)
-    alert('error')
-  })
+    try {
+      axios.get(url, res => res.json)
+        .then(excel => {
+          setStorageClothes(excel.data.portfolio)
+        })
+    }
+    catch (e) {
+      console.log("erRor!!! " + e)
+      alert('error')
+    }
+  }, []);
 
 
   return (
@@ -27,6 +25,7 @@ const StoragePrint = () => {
       <h2>Storage Too Much Print</h2>
       <div className="container">
         <p>{ }</p>
+        <Portfolio clothes={storageClothes} />
       </div>
     </>
   )
