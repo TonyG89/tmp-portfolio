@@ -3,7 +3,7 @@ import { url } from '../const';
 import axios from 'axios';
 import Portfolio from '../modules/Portfolio'
 
-const StoragePrint = () => {
+const StoragePrint = ({sectionClass}) => {
   const [storageClothes, setStorageClothes] = useState([]);
 
   React.useEffect(() => {
@@ -22,10 +22,11 @@ const StoragePrint = () => {
 
   return (
     <>
+    <section className={sectionClass}>
+
       <h2>Storage Too Much Print</h2>
-      <div className="container">
         <Portfolio clothes={storageClothes} />
-      </div>
+    </section>
     </>
   )
 }

@@ -10,6 +10,7 @@ import ToggleBtn from './components/ToggleBtn';
 function App() {
   const [tableOn, setTableOn] = React.useState(false)
 
+  const sectionClass = "xl:w-4/5 mx-auto py-10 px-5 sm:text-center"
 
   return (
     <>
@@ -17,7 +18,7 @@ function App() {
       <main className='bg-gradient-to-t from-stone-700 to-stone-900 text-white'>
         <ToggleBtn setTableOn={(value) => setTableOn(!value)} style={'bg-red-500'}>СМЕНЯЙСЯ!!</ToggleBtn>
         
-        {tableOn ? <PlantClothes /> : <StoragePrint />}
+        {tableOn ? <PlantClothes sectionClass/> : <StoragePrint sectionClass/>}
 
         {/* <PlantClothes /> */}
 
