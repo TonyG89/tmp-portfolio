@@ -6,9 +6,9 @@ const Portfolio = ({ clothes }) => {
 
     console.log(clothes)
     return (
-        <ul className='flex flex-wrap'>Portfolio
+        <ul className='flex flex-wrap justify-center '>
             {clothes.map(obj =>
-            (<li key={obj["id-portfolio"]}>
+            (<li className='h-[600px]' key={obj["id-portfolio"]}>
                 <Card name={obj.name} src={obj["id-portfolio"]} desc={obj.description} tags={obj.tags} />
             </li>))}
             <Error />

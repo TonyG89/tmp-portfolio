@@ -24,7 +24,6 @@ const StoragePrint = () => {
     <>
       <h2>Storage Too Much Print</h2>
       <div className="container">
-        <p>{ }</p>
         <Portfolio clothes={storageClothes} />
       </div>
     </>

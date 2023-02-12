@@ -4,20 +4,24 @@ import Tags from './Tags'
 const Card = ({ name, src, desc, tags }) => {
     const link = `/files/portfolio/(${src}).jpg`
     const none = `/files/goods/none.png`
-    
 
-    return (
-        <div className="
-    max-w-[325px]
+    const containerClass = `
+    w-[325px]
+    h-full
     border-box border rounded-md border-b
     overflow-hidden 
     shadow-lg 
     bg-cards bg-cover
     px-3 py-1 mx-2 mb-8 gap-4
     text-amber-100
-    ">
+    hover:scale-[1.02]
+    transition-all
+    `
+
+    return (
+        <div className={containerClass}>
             <h2 className="font-bold text-xl mb-2">{name}</h2>
-            <img className="hover:absolute hover:w-[{window.innerWidth}px] hover:h-auto rounded-xl bg-zinc-200/20 h-[300px] w-auto mx-auto p-5 border-white" src={link ? link : none} alt={name} />
+            <img className="rounded-xl bg-zinc-200/20 h-[300px] w-auto mx-auto p-5 border-white" src={link ? link : none} alt={name} />
             <div className="border-spacing-1">
                 <em className='text-lg'>Опис:</em>
                 <p>{desc}</p>

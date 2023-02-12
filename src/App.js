@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header nameIndex={tableOn}/>
       <main className='bg-gradient-to-t from-stone-700 to-stone-900 text-white'>
         <ToggleBtn setTableOn={(value) => setTableOn(!value)} style={'bg-red-500'}>СМЕНЯЙСЯ!!</ToggleBtn>
         
