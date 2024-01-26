@@ -15,20 +15,20 @@ const objContacts = [{
     img: "instagram",
     href: "https://www.instagram.com/toomuch.print/"
 },
-{
-    name: "(063) 229-03-66",
-    img: "phone",
-    href: "tel:+380632290366"
-},
-{
-    name: "@toomuchprint",
-    img: "telegram-mono",
-    href: "https://t.me/toomuchprint"
-},
+// {
+//     name: "(063) 229-03-66",
+//     img: "phone",
+//     href: "tel:+380632290366"
+// },
+// {
+//     name: "@toomuchprint",
+//     img: "telegram-mono",
+//     href: "https://t.me/toomuchprint"
+// },
 {
     name: "toomuchprint",
     img: "email",
-    href: "mailto:name@email.com"
+    href: "mailto:toomuchprint@gmail.com"
 }]
 
 const brandList = ["Fruit of the Loom", "Gildan", "Uneek", ..."other"]
